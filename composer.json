@@ -59,7 +59,7 @@
         ],
         "test": [
             "./vendor/bin/phpunit || true"
-    ]
+        ]
     },
     "extra": {
         "installer-paths": {

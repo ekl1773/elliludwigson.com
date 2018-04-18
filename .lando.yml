@@ -1,0 +1,4 @@
+name: e-llando
+recipe: drupal8
+config:
+  webroot: web

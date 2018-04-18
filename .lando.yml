@@ -2,3 +2,7 @@ name: e-llando
 recipe: drupal8
 config:
   webroot: web
+tooling:
+  phpunit:
+    service: appserver
+    description: "Run PHP Unit tests: lando phpunit"

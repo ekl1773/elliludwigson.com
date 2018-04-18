@@ -6,10 +6,31 @@
          colors="true"
          bootstrap="vendor/autoload.php"
          verbose="true"
+         backupStaticAttributes="false"
+         bootstrap="vendor/autoload.php"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
         >
     <testsuites>
         <testsuite name="drupal-composer-project tests">
             <directory>./test/</directory>
         </testsuite>
+        <testsuite name="Application Test Suite">
+            <directory>./tests/</directory>
+        </testsuite>
     </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">web/</directory>
+        </whitelist>
+    </filter>
+    <php>
+        <env name="APP_ENV" value="testing"/>
+        <env name="CACHE_DRIVER" value="array"/>
+        <env name="SESSION_DRIVER" value="array"/>
+        <env name="QUEUE_DRIVER" value="sync"/>
+    </php>
 </phpunit>

@@ -56,7 +56,10 @@
         ],
         "post-update-cmd": [
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ]
+        ],
+        "test": [
+            "./vendor/bin/phpunit || true"
+    ]
     },
     "extra": {
         "installer-paths": {
